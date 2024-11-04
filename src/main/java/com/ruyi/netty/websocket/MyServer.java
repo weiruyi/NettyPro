@@ -46,7 +46,8 @@ public class MyServer {
                             /**
                              * 对于websocket数据是以帧的方式传递，webSocketFrame下面有6个子类
                              * 浏览器请求的时候 ws://localhost:6666/hello
-                             * WebSocketServerProtocolHandler 核心功能是将http协议升级成ws协议，保持长连接
+                             * WebSocketServerProtocolHandler 核心功能是将http协议升级成ws协议，保持长连接  --通过一个状态码101
+                             *
                              */
                             pipeline.addLast(new WebSocketServerProtocolHandler("/hello"));
 
