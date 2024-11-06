@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5782b475-944a-482a-beae-bada04ce76b5" name="Changes" comment="tcp粘包，半包示例">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ruyi/netty/protocoltcp/MessageProtocol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ruyi/netty/protocoltcp/MyClientHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ruyi/netty/protocoltcp/MyClientInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ruyi/netty/protocoltcp/MyMessageDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ruyi/netty/protocoltcp/MyMessageEncoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ruyi/netty/protocoltcp/MyServerHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ruyi/netty/protocoltcp/MyServerInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ruyi/netty/protocoltcp/NettyClientDemo1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ruyi/netty/protocoltcp/NettyServerDemo1.java" afterDir="false" />
+    <list default="true" id="5782b475-944a-482a-beae-bada04ce76b5" name="Changes" comment="自定义协议+编解码器解决粘包，半包问题">
+      <change afterPath="$PROJECT_DIR$/lib/netty-all-4.1.20.Final-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/netty-all-4.1.20.Final-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/netty-all-4.1.20.Final.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,13 +50,17 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "true",
     "GenProtobuf.quickGen": "Java",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/lance/Desktop/Java/NettyPro/src/main/java/com/ruyi/netty/protocoltcp",
+    "last_opened_file_path": "/Users/lance/Desktop/Java/NettyPro/lib",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -76,14 +75,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/src/main/java/com/ruyi/netty/protocoltcp" />
       <recent name="$PROJECT_DIR$/src/main/java/com/ruyi/netty/tcp" />
       <recent name="$PROJECT_DIR$/src/main/java/com/ruyi/netty/codec2" />
       <recent name="$PROJECT_DIR$/src/main/java/com/ruyi/netty/codec" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.NettyClientDemo1">
+  <component name="RunManager" selected="Application.NettyServerDemo1">
     <configuration name="GroupChatClient (1)" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.ruyi.nio.groupchat.GroupChatClient" />
       <module name="NettyPro" />
@@ -200,8 +199,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.NettyClientDemo1" />
         <item itemvalue="Application.NettyServerDemo1" />
+        <item itemvalue="Application.NettyClientDemo1" />
         <item itemvalue="Application.com.ruyi.netty.tcp.NettyClientDemo1" />
         <item itemvalue="Application.com.ruyi.netty.tcp.NettyServerDemo1" />
         <item itemvalue="Application.com.ruyi.netty.codec2.NettyClientDemo1" />
@@ -222,7 +221,7 @@
       <workItem from="1730427567146" duration="28748000" />
       <workItem from="1730699804253" duration="377000" />
       <workItem from="1730700190627" duration="266000" />
-      <workItem from="1730700462445" duration="12210000" />
+      <workItem from="1730700462445" duration="15495000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -256,7 +255,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730869320216</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="自定义协议+编解码器解决粘包，半包问题">
+      <option name="closed" value="true" />
+      <created>1730873369704</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1730873369704</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,7 +274,8 @@
     <MESSAGE value="protobuf使用" />
     <MESSAGE value="protobuf传输多种类型" />
     <MESSAGE value="tcp粘包，半包示例" />
-    <option name="LAST_COMMIT_MESSAGE" value="tcp粘包，半包示例" />
+    <MESSAGE value="自定义协议+编解码器解决粘包，半包问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="自定义协议+编解码器解决粘包，半包问题" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
