@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5782b475-944a-482a-beae-bada04ce76b5" name="Changes" comment="protobuf传输多种类型">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ruyi/netty/tcp/MyClientHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ruyi/netty/tcp/MyClientInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ruyi/netty/tcp/MyServerHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ruyi/netty/tcp/MyServerInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ruyi/netty/tcp/NettyClientDemo1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ruyi/netty/tcp/NettyServerDemo1.java" afterDir="false" />
+    <list default="true" id="5782b475-944a-482a-beae-bada04ce76b5" name="Changes" comment="tcp粘包，半包示例">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ruyi/netty/protocoltcp/MessageProtocol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ruyi/netty/protocoltcp/MyClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ruyi/netty/protocoltcp/MyClientInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ruyi/netty/protocoltcp/MyMessageDecoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ruyi/netty/protocoltcp/MyMessageEncoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ruyi/netty/protocoltcp/MyServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ruyi/netty/protocoltcp/MyServerInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ruyi/netty/protocoltcp/NettyClientDemo1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ruyi/netty/protocoltcp/NettyServerDemo1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +61,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/lance/Desktop/Java/NettyPro/src/main/java/com/ruyi/netty/tcp",
+    "last_opened_file_path": "/Users/lance/Desktop/Java/NettyPro/src/main/java/com/ruyi/netty/protocoltcp",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -73,13 +76,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/ruyi/netty/protocoltcp" />
       <recent name="$PROJECT_DIR$/src/main/java/com/ruyi/netty/tcp" />
       <recent name="$PROJECT_DIR$/src/main/java/com/ruyi/netty/codec2" />
       <recent name="$PROJECT_DIR$/src/main/java/com/ruyi/netty/codec" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.com.ruyi.netty.tcp.NettyClientDemo1">
+  <component name="RunManager" selected="Application.NettyClientDemo1">
     <configuration name="GroupChatClient (1)" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.ruyi.nio.groupchat.GroupChatClient" />
       <module name="NettyPro" />
@@ -107,11 +111,24 @@
       </method>
     </configuration>
     <configuration name="NettyClientDemo1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ruyi.netty.codec.NettyClientDemo1" />
+      <option name="MAIN_CLASS_NAME" value="com.ruyi.netty.protocoltcp.NettyClientDemo1" />
       <module name="NettyPro" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ruyi.netty.codec.*" />
+          <option name="PATTERN" value="com.ruyi.netty.protocoltcp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NettyServerDemo1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ruyi.netty.protocoltcp.NettyServerDemo1" />
+      <module name="NettyPro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ruyi.netty.protocoltcp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -134,19 +151,6 @@
     </configuration>
     <configuration name="com.ruyi.netty.codec2.NettyClientDemo1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ruyi.netty.codec2.NettyClientDemo1" />
-      <module name="NettyPro" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ruyi.netty.codec2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="com.ruyi.netty.codec2.NettyServerDemo1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ruyi.netty.codec2.NettyServerDemo1" />
       <module name="NettyPro" />
       <extension name="coverage">
         <pattern>
@@ -188,19 +192,19 @@
       <item itemvalue="Application.NioClient (1)" />
       <item itemvalue="Application.GroupChatClient (2)" />
       <item itemvalue="Application.GroupChatClient (1)" />
+      <item itemvalue="Application.NettyServerDemo1" />
       <item itemvalue="Application.NettyClientDemo1" />
       <item itemvalue="Application.com.ruyi.netty.codec2.NettyClientDemo1" />
-      <item itemvalue="Application.com.ruyi.netty.codec2.NettyServerDemo1" />
       <item itemvalue="Application.com.ruyi.netty.tcp.NettyClientDemo1" />
       <item itemvalue="Application.com.ruyi.netty.tcp.NettyServerDemo1" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.NettyClientDemo1" />
+        <item itemvalue="Application.NettyServerDemo1" />
         <item itemvalue="Application.com.ruyi.netty.tcp.NettyClientDemo1" />
         <item itemvalue="Application.com.ruyi.netty.tcp.NettyServerDemo1" />
         <item itemvalue="Application.com.ruyi.netty.codec2.NettyClientDemo1" />
-        <item itemvalue="Application.com.ruyi.netty.codec2.NettyServerDemo1" />
-        <item itemvalue="Application.NettyClientDemo1" />
       </list>
     </recent_temporary>
   </component>
@@ -218,7 +222,7 @@
       <workItem from="1730427567146" duration="28748000" />
       <workItem from="1730699804253" duration="377000" />
       <workItem from="1730700190627" duration="266000" />
-      <workItem from="1730700462445" duration="8963000" />
+      <workItem from="1730700462445" duration="12210000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -244,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730858948423</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="tcp粘包，半包示例">
+      <option name="closed" value="true" />
+      <created>1730869320216</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1730869320216</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,7 +266,8 @@
     <MESSAGE value="init" />
     <MESSAGE value="protobuf使用" />
     <MESSAGE value="protobuf传输多种类型" />
-    <option name="LAST_COMMIT_MESSAGE" value="protobuf传输多种类型" />
+    <MESSAGE value="tcp粘包，半包示例" />
+    <option name="LAST_COMMIT_MESSAGE" value="tcp粘包，半包示例" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
