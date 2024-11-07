@@ -43,7 +43,7 @@ public class GroupChatServer {
                         SelectionKey key = iterator.next();
 
                         //监听到accept
-                        if(key.isAcceptable()){
+                         if(key.isAcceptable()){
                             SocketChannel sc = serverSocketChannel.accept();
                             sc.configureBlocking(false);
                             // 注册到selector
