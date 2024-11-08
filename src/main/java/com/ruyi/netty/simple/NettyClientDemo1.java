@@ -30,7 +30,7 @@ public class NettyClientDemo1 {
             System.out.println("... client is ok...");
 
             //启动客户端连接服务器端
-            ChannelFuture cf = bootstrap.connect("127.0.0.1", 6666).sync();
+            ChannelFuture cf = bootstrap.connect("127.0.0.1", 9999).sync();
 
             cf.channel().closeFuture().sync();
         } finally {
